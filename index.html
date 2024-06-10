@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <style>
+    #container {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      padding: 100px;
+    }
+  </style> -->
+</head>
+<body>
+  <h1>debounce</h1>
+  debounce: <input type="text" id="debounce"><br/>
+  throttle: <input type="text" id="throttle"><br/>
+  <div id="container"></div>
+</body>
+<script src="./debounce.js"></script>
+<script src="./throttle.js"></script>
+<script src="./promise.js"></script>
+<script src="./publish-subscribe.js"></script>
+<script src="./observer.js"></script>
+<script>
+  const debounceInput = document.querySelector('#debounce')
+  debounceInput.addEventListener('input', debounce((...args) => {
+    console.log('debounce');
+  }, 500, true))
+
+  const throttleInput = document.querySelector('#throttle')
+  throttleInput.addEventListener('input', throttle((...args) => {
+    console.log('throttle');
+  }, 1000, true))
+</script>
+</html>
