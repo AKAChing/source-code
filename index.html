@@ -21,10 +21,27 @@
 </body>
 <script src="./debounce.js"></script>
 <script src="./throttle.js"></script>
-<script src="./promise.js"></script>
+<!-- <script src="./promise.js"></script>
 <script src="./publish-subscribe.js"></script>
-<script src="./observer.js"></script>
+<script src="./observer.js"></script> -->
+<script src="./vm.js"></script>
 <script>
+  let vm = new Vue({
+    data: {
+      message: 'hello',
+      flag: true,
+      list: [1,2,3],
+      obj: {
+        a: 1,
+        b: 2,
+        man: {
+          c: 3,
+          d: 4
+        }
+      }
+    }
+  })
+
   const debounceInput = document.querySelector('#debounce')
   debounceInput.addEventListener('input', debounce((...args) => {
     console.log('debounce');

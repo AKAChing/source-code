@@ -35,7 +35,7 @@ try {
 	a = 2
 	console.log(a)
 } catch (error) {
-	console.log(error.name)
-	console.log(error.message)
+	// console.log(error.name)
+	// console.log(error.message)
 }
-throw new Error('错误信息')
+// throw new Error('错误信息')
